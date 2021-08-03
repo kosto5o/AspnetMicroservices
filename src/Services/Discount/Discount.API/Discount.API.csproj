@@ -12,6 +12,7 @@
     <None Remove="Npgsql" />
     <None Remove="Dapper" />
     <None Remove="Repositories\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
@@ -22,5 +23,6 @@
     <Folder Include="Entities\" />
     <Folder Include="Controllers\" />
     <Folder Include="Repositories\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
