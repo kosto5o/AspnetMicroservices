@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Ordering.Application;
 using Ordering.Infrastructure;
+using Ordering.Infrastructure.Persistence;
 
 namespace Ordering.Api
 {
@@ -29,7 +30,7 @@ namespace Ordering.Api
         {
             services.AddApplicationServices();
             services.AddInfrastructureServices(this.Configuration);
-
+            
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
