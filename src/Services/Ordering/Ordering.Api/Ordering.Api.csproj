@@ -10,6 +10,11 @@
     <None Remove="Extensions\" />
     <None Remove="Controllers\" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="MassTransit" />
+    <None Remove="MassTransit.RabbitMQ" />
+    <None Remove="MassTransit.AspNetCore" />
+    <None Remove="EventBusConsumer\" />
+    <None Remove="Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
@@ -17,6 +22,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="MassTransit" Version="7.2.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.2.1" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.2.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ordering.Application\Ordering.Application.csproj">
@@ -25,9 +36,14 @@
     <ProjectReference Include="..\Ordering.Infrastructure\Ordering.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Controllers\" />
+    <Folder Include="EventBusConsumer\" />
+    <Folder Include="Mapping\" />
   </ItemGroup>
 </Project>
